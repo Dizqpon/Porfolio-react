@@ -1,21 +1,35 @@
+.fondo {
+  width: 100%;
+  background-image: url('../src/img/fondo1.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .App {
-  text-align: center;
+  margin-top: 10%;
+  width: 85%;
+  height: auto;
+  margin: 0%;
+  padding: 0%;
+  background-color: #f0f0f0;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+  box-shadow: 0px 0px 80px #f0f0f0;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-link {
+  color: #61dafb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.AppNigth {
   background-color: #282c34;
-  min-height: 100vh;
+  text-align: center;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,12 +37,90 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#header {
+  padding: 0%;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.icono {
+ float: left;
+ margin-left: 30px;
+}
+.menu {
+  margin-right: 30px;
+}
+.menuBar {
+  padding-right: 30px;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  left: 70%;
+  top: 10%;
+  overflow: auto;
+  border-radius: 20px 0px 20px 20px;
+  box-shadow: 5px 5px 10px #282c3450;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  background-color: #f1f1f1;
+  color: #282c34;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 300%;
+  letter-spacing: 0.2rem;
 }
 
-@keyframes App-logo-spin {
+.menuBar li {
+  list-style: outside;
+}
+
+.menuBar a {
+  display: block;
+  text-decoration: underline 2px;
+  color: #282c34;
+}
+.menuBar a:hover {
+  text-decoration: underline 3px;
+  color: #282af244;
+}
+
+#nav {
+  width: 100%;
+  height: 40vh;
+  background-image: url('../src/img/imagen-nav1.png');
+  background-position: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-position: 60%;
+}
+.nav {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#nav img {
+  width: 20vh;
+}
+
+#nav img:hover {
+  width: 25vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #nav img {
+    animation: logos infinite 15s ease-in;
+  }
+}
+
+@keyframes logos {
   from {
     transform: rotate(0deg);
   }
@@ -36,3 +128,136 @@
     transform: rotate(360deg);
   }
 }
+
+.infoInteres {
+
+  padding: 100px 50px 50px 50px;
+  text-align: center;
+}
+
+.infoInteres > h2 {
+  
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px #282c34;
+}
+
+.infoInteres > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.nivelProgramacion {
+  display: inline-flex;
+  border-bottom: 10px solid #282c34;
+  border-radius: 13px;
+}
+
+
+
+.iconosNivel {
+  margin: 5px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logosPrograming:hover {
+    animation: logos-programing normal 3s both;
+  }
+}
+
+@keyframes logos-programing {
+  from {
+    transform: scale(1.2, 1);
+
+  }
+  to {
+    transform: scale(1, 1.2);
+  }
+}
+
+.pdfDescargable {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../src/img/fondo-curriculum.png');
+  background-position: 30% 50%;
+}
+
+.pdfDescargable div {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+.tarjetaPdfCurr {
+  width: 35%;
+  height: 100%;
+  background-image: url('../src/img/curriculum-mini.png');
+  padding: 40px 25px;
+}
+
+.tarjetaPdfCurr:hover {
+  box-shadow: 1px 1px 20px #282c34;
+}
+.pdfDescargable a {
+  text-decoration: none;
+  color: #282c34;
+}
+
+.pdfDescargable p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.trabajosRealizados {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.trabajosRealizados > img {
+  width: 50%;
+  transition: all .25s ease-in-out;
+}
+
+.trabajosRealizados button {
+  width: 25%;
+}
+
+.trabajosRealizados > div {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  display: inline;
+  transition: 700ms all ease;
+}
+
+.trabajosRealizados > button > img {
+  display: inline;
+  width: 25%;
+}
+
+
+
+.formacion > h2 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px #282c34;
+}
+
+
+
+
+
+
+
