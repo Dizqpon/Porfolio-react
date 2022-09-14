@@ -13,24 +13,24 @@ export const NivelPrograming = () => {
     <div className='nivelProgramacion' id='nivPro'>
       
         <img src={logoHtml} alt='logo html'/>
-        <FaLaughBeam/><br/><FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/>
+        {/* <FaLaughBeam/><br/><FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/> */}
 
 
         <img src={logoCss} alt='logo css'/>
 
-        <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/>
+        {/* <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/> */}
 
         <img src={logoJavaScript} alt='logo javascript'/>
-        <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/>
+        {/* <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/> */}
 
         <img src={logoNodeJs} alt= 'logo nodejs'/>
 
-        <FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/><FaMehBlank/>
+        {/* <FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/><FaMehBlank/> */}
  
 
         <img src={logoReact} alt= 'logo react'/>
 
-        <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/>
+        {/* <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/> */}
 
     </div>
   )
