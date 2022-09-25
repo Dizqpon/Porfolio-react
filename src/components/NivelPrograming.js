@@ -6,32 +6,45 @@ import logoCss from '../img/logo-css.png';
 import logoJavaScript from '../img/logo-javascript.png';
 import logoNodeJs from '../img/logo-node.png';
 import logoReact from '../img/logo-react.png';
+import logoJava from '../img/logo-java.png';
 
 export const NivelPrograming = () => {
   
   return (
-    <div className='nivelProgramacion' id='nivPro'>
-      
+    <div id='nivPro'>
+      <div className='nivelProgramacion' >
         <img src={logoHtml} alt='logo html'/>
-        {/* <FaLaughBeam/><br/><FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/> */}
-
 
         <img src={logoCss} alt='logo css'/>
 
-        {/* <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/> */}
-
         <img src={logoJavaScript} alt='logo javascript'/>
-        {/* <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/> */}
-
+        
         <img src={logoNodeJs} alt= 'logo nodejs'/>
 
-        {/* <FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/><FaMehBlank/> */}
- 
+        <img src={logoReact} alt= 'logo react'/> 
 
-        <img src={logoReact} alt= 'logo react'/>
-
-        {/* <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/> */}
-
+        <img src={logoJava} alt= 'logo java' /> 
+      </div>
+      <div className='contenedorNivel'>
+    <div className='inputNivel html'>
+      <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/>
+    </div>
+    <div className='inputNivel css'>
+      <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/>
+    </div>
+    <div className='inputNivel javaScript'>
+      <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/>
+    </div>
+    <div className='inputNivel nodeJs'>
+      <FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/><FaMehBlank/>
+    </div>
+    <div className='inputNivel reactJs'>
+      <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/>
+    </div>
+    <div className='inputNivel java'>
+      <FaLaughBeam/><FaLaughBeam/><FaLaughBeam/><FaMehBlank/><FaMehBlank/>
+    </div>
+    </div>
     </div>
   )
 }

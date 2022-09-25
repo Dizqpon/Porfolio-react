@@ -148,13 +148,49 @@
 }
 
 .nivelProgramacion {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
   border-bottom: 10px solid #282c34;
   border-radius: 13px;
 }
 
+.nivelProgramacion img{
+  width: 12%;
+  filter: drop-shadow(8px 0px 1px #4b4b50);
+  animation: fluctuar 3s linear infinite;
+}
 
+@keyframes fluctuar {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
 
+.nivelProgramacion img:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.nivelProgramacion img:nth-child(3) {
+  animation-delay: .4s;
+}
+
+.nivelProgramacion img:nth-child(4) {
+  animation-delay: .6s;
+}
+
+.nivelProgramacion img:nth-child(5) {
+  animation-delay: .8s;
+}
+
+.contenedorNivel {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 2.5% 3% 2.5%;
+}
 .iconosNivel {
   margin: 5px;
 }
@@ -175,7 +211,7 @@
   }
 }
 
-.pdfDescargable {
+.containerPdf {
   width: 100%;
   height: 90vh;
   display: flex;
@@ -186,7 +222,7 @@
   background-position: 30% 50%;
 }
 
-.pdfDescargable div {
+.containerPdf div {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -195,25 +231,207 @@
   padding: 10px;
 }
 
+.button {
+  --background: #164773;
+  --rectangle: #082B40;
+  --success: #38BC6E;
+  --text: #fff;
+  --arrow: #fff;
+  --checkmark: #fff;
+  --shadow: rgba(10, 22, 50, 0.24);
+  display: flex;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px -1px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:active {
+  transform:  scale(0.95);
+  box-shadow: 0 1px 4px -1px var(--shadow);
+}
+
+.button > div::before, .button > div::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.button > div::before {
+  border-radius: 1px;
+  width: 2px;
+  top: 50%;
+  left: 50%;
+  height: 17px;
+  margin: -9px 0 0 -1px;
+  background: var(--arrow);
+}
+
+.button > div::after {
+  width: 60px;
+  height: 60px;
+  transform-origin: 50% 0;
+  border-radius: 0 0 80px 80px;
+  background: var(--success);
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+}
+
+.button ul {
+  margin: 0;
+  padding: 16px 40px;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  backface-visibility: hidden;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--text);
+}
+
+.button ul li:not(:first-child) {
+  top: 16px;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.button ul li:nth-child(2) {
+  top: 76px;
+}
+
+.button ul li:nth-child(3) {
+  top: 136px;
+}
+
+.button > div {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: var(--rectangle);
+}
+
+.button > div svg {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  margin: -9px 0 0 -10px;
+  fill: none;
+  z-index: 1;
+  stroke-width: 2px;
+  stroke: var(--arrow);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.button.loading ul {
+  animation: text calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+
+.button.loading > div:before {
+  animation: line calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+
+.button.loading ul {
+  animation: background calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+
+.button.loading > div svg {
+  animation: svg calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+
+@keyframes text {
+  10%, 85% {
+    transform: translateY(-100%);
+  }
+  95%, 100% {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes line {
+  5%, 10% {
+    transform: translateY(-30px);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  65% {
+    transform: translateY(0);
+  }
+  75%, 100% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes svg {
+  0%, 20% {
+    stroke-dasharray: 0px;
+    stroke-dashoffset: 0px;
+}
+  21%, 89% {
+    stroke-dasharray: 26px;
+    stroke-dashoffset: 26px;
+    stroke-width: 3px;
+    margin: -10px 0 0 -10px;
+    stroke: var(--checkmark);
+}
+100% {
+  stroke-dasharray: 26px;
+  stroke-dashoffset: 0;
+  margin: -10px 0 0 -10px;
+  stroke: var(--checkmark);
+}
+12% {
+  opacity: 1;
+}
+20%, 89% {
+  opacity: 0;
+}
+90%, 100% {
+  opacity: 1;
+}
+}
+
+@keyframes background {
+  10% {
+    transform: scaleY(0);
+  }
+  40% {
+    transform: scaleY(0.15);
+  }
+  65% {
+    transform: scaleY(0.5);
+    border-radius: 0 0 50% 50%;
+  }
+  75% {
+    border-radius: 0 0 50% 50%;
+  }
+  90%, 100% {
+    border-radius: 0;
+  }
+  75%, 100% {
+    transform: scaleY(1);
+  }
+}
+
 
 .tarjetaPdfCurr {
   width: 35%;
-  height: 100%;
+  height: 65%;
   background-image: url('../src/img/curriculum-mini.png');
   padding: 40px 25px;
 }
 
 .tarjetaPdfCurr:hover {
   box-shadow: 1px 1px 20px #282c34;
-}
-.pdfDescargable a {
-  text-decoration: none;
-  color: #282c34;
-}
-
-.pdfDescargable p {
-  font-size: 2rem;
-  font-weight: 700;
 }
 
 .trabajosRealizados {
